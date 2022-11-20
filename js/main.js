@@ -104,7 +104,7 @@ function addNewUser(userInfo){
 }
 
 userDelete.addEventListener('click',()=>{
-  userId.innerHTML = ""
+    userId.innerHTML = ""
     userName.innerHTML = ""
     userEmail.innerHTML = ""
     userPersonalId.innerHTML =""
@@ -112,6 +112,9 @@ userDelete.addEventListener('click',()=>{
     userZipCode.innerHTML = ""
     userGender.innerHTML = ""
 })
+
+
+
 
 
 
