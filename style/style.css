@@ -84,7 +84,12 @@ p{
  border: none;
  z-index: 2;
  height: 40px;
+ opacity: 0.5;
 }
+#close:hover{
+  opacity: 1;
+}
+
 form{
  display: none;
  z-index: 1;

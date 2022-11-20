@@ -25,14 +25,12 @@ const newUserZipCode = document.querySelector("#new-user-zip-code")
 const newUserGenderfemale = document.querySelector("#gender-female")
 const newUserGenderMale = document.querySelector("#gender-male")
 
-
 function getAllUser() {
   fetch("https://borjomi.loremipsum.ge/api/all-users").then((res)=>{
     return res.json()
   }).then((data)=>{
     const users = data.users
 
-    console.log(data)
     userId.innerHTML = users[3].id
     userName.innerHTML = users[3].first_name
     userEmail.innerHTML = users[3].email
@@ -51,7 +49,7 @@ function startModal() {
     closingModal.style.display= 'block'
     closingModal.innerHTML='X' 
     formInfo.style.display = 'flex'
-    closingModal.addEventListener("click", ()=>{
+  closingModal.addEventListener("click", ()=>{
       registration.classList.remove('modal')
       closingModal.style.display= 'none'
       registration.innerHTML="Registration" 
@@ -62,6 +60,8 @@ function startModal() {
   
 }
 startModal()
+
+
 
 
 formInfo.addEventListener("submit",(e)=>{
@@ -103,9 +103,16 @@ function addNewUser(userInfo){
   })
 }
 
-userEdit.addEventListener("click",()=>{
-  
+userDelete.addEventListener('click',()=>{
+  userId.innerHTML = ""
+    userName.innerHTML = ""
+    userEmail.innerHTML = ""
+    userPersonalId.innerHTML =""
+    userMobNumber.innerHTML = ""
+    userZipCode.innerHTML = ""
+    userGender.innerHTML = ""
 })
+
 
 
 
